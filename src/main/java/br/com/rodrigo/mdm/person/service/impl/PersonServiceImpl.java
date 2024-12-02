@@ -27,10 +27,10 @@ public class PersonServiceImpl implements PersonService {
     @Override
     public PersonDTO convertToObject(Long id) {
         log.info("Obtendo dados do objeto através do ID {}", id);
-        PersonDTO pessoa = gerarPessoa(id);
+        PersonDTO pessoa = generatePerson(id);
         log.info("Dados obtidos: {}", pessoa.toString());
         rabbitMQService.send(String.valueOf(id));
-        return gerarPessoa(id);
+        return generatePerson(id);
     }
 
     private Long generatePersonId(Long cpfCnpj, Integer tipoPessoaInt) {
@@ -44,7 +44,7 @@ public class PersonServiceImpl implements PersonService {
         return null;
     }
 
-    private PersonDTO gerarPessoa(Long id) {
+    private PersonDTO generatePerson(Long id) {
         if (id == 0) {
             return null;
         }

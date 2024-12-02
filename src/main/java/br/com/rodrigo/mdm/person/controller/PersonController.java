@@ -23,7 +23,7 @@ public class PersonController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @GetMapping("/pessoa")
+    @GetMapping("/person")
     public ResponseEntity<Long> personToId(@RequestParam Long identity, @RequestParam Integer personType) {
         Long personId = personService.convertToId(identity, personType);
         return Optional.ofNullable(personId)
