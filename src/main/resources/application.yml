@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: mdm-person-conversion-api
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: data-integration-adm
+    password: data-integration-adm
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/data-integration-realm
+
+server:
+  port: 8082

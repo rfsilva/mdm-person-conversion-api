@@ -1,0 +1,7 @@
+br\com\rodrigo\eq3\dto\GeneroPessoa.class
+br\com\rodrigo\eq3\dto\PessoaDTO.class
+br\com\rodrigo\eq3\Eq3Application.class
+br\com\rodrigo\eq3\dto\StatusPessoa.class
+br\com\rodrigo\eq3\dto\PessoaDTO$PessoaDTOBuilder.class
+br\com\rodrigo\eq3\controller\EQ3Controller.class
+br\com\rodrigo\eq3\dto\TipoPessoa.class
