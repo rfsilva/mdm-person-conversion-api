@@ -2,15 +2,16 @@ spring:
   application:
     name: mdm-person-conversion-api
   rabbitmq:
-    host: localhost
-    port: 5672
-    username: data-integration-adm
-    password: data-integration-adm
+    host: ${MDM_QUEUEMGR_HOST}
+    port: ${MDM_QUEUEMGR_PORT}
+    username: ${MDM_QUEUEMGR_USERNAME}
+    password: ${MDM_QUEUEMGR_PASSWORD}
+
   security:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8080/realms/data-integration-realm
+          issuer-uri: ${KEYCLOAK_ISSUER_URI}
 
 server:
   port: 8082
